@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="JQuery FlexiGrid, SimpleModal &amp; QTip Javascript for Allegiance Stats &amp; AGC Events by Imago 8/10 &lt;imagotrigger@gmail.com&gt;" />
+	<title>Allegiance Events and Stats Admin</title>
+	<link rel="stylesheet" type="text/css" href="http://174.120.142.26/~imago/allegz.css" />
+	<!-- Pre-Render JS Libz -->
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="http://174.120.142.26/~imago/loadz.js"></script>
+</head>
+<body>
+	<span style="text-align:center"></span>
+	<!-- FlexiGrids -->
+	<div style="width:100%" align="center" class="tabs">
+		<table cellpadding="0" cellspacing="0">
+			<tr><td valign="bottom">
+				<ul class="tabNav">
+					<li class="current"><a href="#"><span>Events</span></a></li>
+					<li><a href="#"><span>Games</span></a></li>
+					<li><a href="#"><span>Teams</span></a></li>
+					<li><a href="#"><span>Players</span></a></li>
+				</ul>
+			</td>
+			<td>
+				<img src="http://174.120.142.26/~imago/images/logo.png" alt="'Oblivion' pre-release logo"/>
+			</td></tr>
+		</table>
+		<div id="tabcrap" class="tabContainer" style="border-width: 5px; border-style: outset; border-color: #666666; width:1024px;">
+			<div id='event-dialog' align="center" class="tab">
+				<!-- Events Layout -->
+				<table id="flexEvents" style="display:none" align="left"><tr><td></td></tr></table>
+				<span style="visibility:hidden"><a class="raisemodal" href="#"></a><a class="updatemodal" href="#"></a></span>
+			</div>
+			<div id='game-dialog' align="center" class="tab current">
+				<!-- Games Layout -->
+				<table id="flexGames" style="display:none" align="left"><tr><td></td></tr></table>
+				<span style="visibility:hidden"><a class="raisemodal" href="#"></a><a class="updatemodal" href="#"></a></span>
+			</div>
+			<div id='team-dialog' align="center" class="tab">
+				<!-- Teams Layout -->
+				<table id="flexTeams" style="display:none" align="left"><tr><td></td></tr></table>
+				<span style="visibility:hidden"><a class="raisemodal" href="#"></a><a class="updatemodal" href="#"></a></span>
+			</div>
+			<div id='player-dialog' align="center" class="tab">
+				<!-- Players Layout -->
+				<table id="flexPlayers" style="display:none" align="left"><tr><td></td></tr></table>
+				<span style="visibility:hidden"><a class="raisemodal" href="#"></a><a class="updatemodal" href="#"></a></span>
+			</div> <!-- End FlexiGrid -->
+		</div>
+	</div>
+	<!-- Event SimpleModal -->
+	<div id="event-modal-content">
+		<div id="event-modal-title">
+			<span class="thetitle">Please wait...</span>
+		</div>
+		<div class="close"><a href="#" class="simplemodal-close">X</a></div>
+		<!-- Event Layout -->
+		<div id="event-modal-data">
+			<div id="event-modal-body">
+				<!-- data outer 20/60/20 -->
+				<div class="event-headersides">
+					<span id="event-type-image">[img]</span>
+					<br/>
+					<span class="smhead">Type:</span>
+					&nbsp;
+					<span id="event-type-caption" class="smheav">[txt]</span>
+				</div>
+				<div class="event-headerbody">
+					<p class="tight"><span id="event-modal-header" style="color:#000">loading results!</span></p>
+					<p class="tight"><span id="event-modal-desc">please be patient!</span></p>
+					<!-- data inner 50/50 (half) -->
+					<div class="half">
+						<span class="header">Event&nbsp;Triggered&nbsp;Local&nbsp;Time</span>
+						<br/>
+						<span id="event-localtime" class="heavy">...</span>
+					</div>
+					<div class="half">
+
+						<span class="header">Database&nbsp;Entered&nbsp;UTC</span>
+						<br/>
+						<span id="event-dbtime" class="heavy">...</span>
+					</div>
+					<!-- end half n half -->
+				</div>
+				<div class="event-headersides">
+					<span id="event-severity-image">[img]</span>
+					<br/>
+					<span class="smhead">Severity:</span>
+					&nbsp;
+					<span id="event-severity-caption" class="smheav">[txt]</span>
+				</div>
+				<!-- end 20/60/40 -->
+				<!-- data 33/33/33 (triplet) -->
+				<div class="triplet">
+					<span class="header">Subject</span>
+					<br/>
+					<span id="event-SubjectName" class="heavy"></span>
+					&nbsp;ID:
+					<span id="event-SubjectID" class="heavy"></span>
+				</div>
+				<div class="triplet">
+
+					<span class="header">Computer Name</span>
+					<br/>
+					<span id="event-ComputerName" class="heavy"></span>
+				</div>
+				<div class="triplet">
+					<span class="header">Game Context</span>
+					<br/>
+					<span id="event-Context" class="heavy"></span>
+
+					&nbsp;ID:
+					<span id="event-gid" class="heavy"></span>
+				</div>
+				<!-- end triplet -->
+				<!-- outer data 50/50 (half) -->
+				<div class="half atop">
+					<span class="header">Log&nbsp;Message</span>
+					<br/>
+					<span id="event-logline" class="heavy">...</span>
+					<!-- inner left tail -->
+					<p style="margin-top:5px">
+						<span class="header">Miscellaneous</span>
+						<br/>
+						<span class="tight">
+							<span class="smhead">Viewing row </span><span class="smheav" id="event-eid">...</span>
+							<span class="smhead"> created for AGC Event </span><span class="smheav" id="event-id">...</span>
+							<br/>
+							<span class="smhead">It </span><span class="smheav" id="event-LogAsNTEvent">...</span>
+							<span class="smhead">logged to NT and </span><span class="smheav" id="event-LogAsDBEvent">...</span>
+							<span class="smhead"> logged to DB.&nbsp; Triggered in</span>
+							<br/>
+							<span class="smhead">the&nbsp;</span><span class="smheav" id="event-TZ">...</span><span class="smhead">&nbsp;zone.</span>
+							<br/>
+							<span class="smhead">This is </span><span class="smheav" id="event-Valid">...</span>
+							<span class="smhead"> having a </span><span class="smheav" id="event-Lag">...</span><span class="smhead"> second difference.</span>
+						</span>
+					</p>
+				</div>
+				<div class="half atop">
+					<!-- inner right divtable -->
+					<div class="tablediv">
+						<span id="event-props">...</span>
+					</div>
+					<!-- end divtable -->
+				</div>
+				<!-- footer 33/33/33 (triplet) -->
+				<div style="float:left;text-align:center;width:100%">
+					<div class="triplet">
+						<span id="event-Prev" class="smhead" style="float:left; text-align: left; margin-top: 4px">...</span>
+					</div>
+					<div class="triplet">
+						<button id="eventbutton" class="simplemodal-close">Close</button>
+					</div>
+					<div class="triplet">
+						<span id="event-Next" class="smhead" style="float:right; text-align: right; margin-top: 4px">...</span>
+					</div>
+				</div> <!-- end footer -->
+				<img src="http://174.120.142.26/~imago/images/xline.png" alt="#"/> <!-- intentional: This is used to resize SimpleModal dialog 'on-the-fly' -->
+			</div> <!-- End Event Body -->
+		</div> <!-- End Event Layout -->
+	</div> <!-- End SimpleModal -->
+
+
+	<!-- Game SimpleModal -->
+	<div id="game-modal-content">
+		<div id="game-modal-title">
+			<span class="thetitle">Please wait...</span>
+		</div>
+		<div class="close"><a href="#" class="simplemodal-close">X</a></div>
+		<!-- Game Layout -->
+		<div id="game-modal-data">
+			<div id="game-modal-body">
+				<!-- data outer 20/60/20 -->
+				<div class="game-headersides">
+					<span class="smhead">mpid:</span>
+					&nbsp;
+					<span id="game-mpid" class="smheav">[txt]</span>
+				</div>
+				<div class="game-headerbody">
+					<p class="tight"><span id="game-modal-header" style="color:#000">loading results!</span></p>
+					<p class="tight"><span id="game-modal-desc">please be patient!</span></p>
+					<!-- data inner 50/50 (half) -->
+					<div class="half">
+						<span class="header">Game&nbsp;Context&nbsp;String&nbsp;ID</span>
+						<br/>
+						<span id="game-Context" class="heavy">...</span>
+					</div>
+					<div class="half">
+
+						<span class="header">Database&nbsp;Entered&nbsp;UTC</span>
+						<br/>
+						<span id="game-dbtime" class="heavy">...</span>
+					</div>
+					<!-- end half n half -->
+				</div>
+				<div class="game-headersides">
+					<span class="smhead">Game ID:</span>
+					&nbsp;
+					<span id="game-id" class="smheav">[txt]</span>
+				</div>
+				<!-- end 20/60/40 -->
+
+				<!-- data 33/33/33 (triplet) -->
+				<div class="triplet">
+					<span class="header">Winners</span>
+					<br/>
+					<span id="game-Winners" class="heavy"></span>
+					&nbsp;ID:
+					<span id="game-wtid" class="heavy"></span>
+				</div>
+				<div class="triplet">
+
+					<span class="header">Duration</span>
+					<br/>
+					<span id="game-Duration" class="heavy"></span>
+				</div>
+				<div class="triplet">
+					<span class="header">Conquest?</span>
+					<br/>
+					<span id="game-IsConquest" class="heavy"></span>
+
+					&nbsp;ID:
+					<span id="game-Conquest" class="heavy"></span>
+				</div>
+				<!-- end triplet -->
+
+				<div class="tablediv">
+					<span id="game-params">...</span>
+				</div>
+
+				<!-- footer 33/33/33 (triplet) -->
+				<div style="float:left;text-align:center;width:100%">
+					<div class="triplet">
+						<span id="game-Prev" class="smhead" style="float:left; text-align: left; margin-top: 4px">...</span>
+					</div>
+					<div class="triplet">
+						<button id="gamebutton" class="simplemodal-close">Close</button>
+					</div>
+					<div class="triplet">
+						<span id="game-Next" class="smhead" style="float:right; text-align: right; margin-top: 4px">...</span>
+					</div>
+				</div> <!-- end footer -->
+				<img src="http://174.120.142.26/~imago/images/xline.png" alt="#"/> <!-- intentional: This is used to resize SimpleModal dialog 'on-the-fly' -->
+			</div> <!-- End Game Body -->
+		</div> <!-- End Game Layout -->
+	</div> <!-- End SimpleModal -->
+
+
+	<!-- Team SimpleModal -->
+	<div id="team-modal-content">
+		<div id="team-modal-title">
+			<span class="thetitle">Please wait...</span>
+		</div>
+		<div class="close"><a href="#" class="simplemodal-close">X</a></div>
+		<!-- Team Layout -->
+		<div id="team-modal-data">
+			<div id="team-modal-body">
+				<span id="team-id">...</span><br/>
+				<span id="team-gid">...</span><br/>
+				<span id="team-Context">...</span><br/>
+				<span id="team-nTeamID">...</span><br/>
+				<span id="team-szName">...</span><br/>
+				<span id="team-nCivID">...</span><br/>
+				<span id="team-cPlayerKills">...</span><br/>
+				<span id="team-cBaseKills">...</span><br/>
+				<span id="team-cBaseCaptures">...</span><br/>
+				<span id="team-cDeaths">...</span><br/>
+				<span id="team-cEjections">...</span><br/>
+				<span id="team-cFlags">...</span><br/>
+				<span id="team-cArtifacts">...</span><br/>
+				<span id="team-cConquest">...</span><br/>
+				<span id="team-cProspBuy">...</span><br/>
+				<span id="team-cProspDone">...</span><br/>
+				<span id="team-Duration">...</span><br/>
+				<span id="team-Research">...</span><br/>
+				<span id="team-Faction">...</span><br/>
+				<!-- footer 33/33/33 (triplet) -->
+				<div style="float:left;text-align:center;width:100%">
+					<div class="triplet">
+						<span id="team-Prev" class="smhead" style="float:left; text-align: left; margin-top: 4px">...</span>
+					</div>
+					<div class="triplet">
+
+						<button id="teambutton" class="simplemodal-close">Close</button>
+					</div>
+					<div class="triplet">
+						<span id="team-Next" class="smhead" style="float:right; text-align: right; margin-top: 4px">...</span>
+					</div>
+				</div> <!-- end footer -->
+				<img src="http://174.120.142.26/~imago/images/xline.png" alt="#"/> <!-- intentional: This is used to resize SimpleModal dialog 'on-the-fly' -->
+			</div> <!-- End Team Body -->
+		</div> <!-- End Team Layout -->
+	</div> <!-- End SimpleModal -->
+
+	<!-- Player SimpleModal -->
+	<div id="player-modal-content">
+		<div id="player-modal-title">
+			<span class="thetitle">Please wait...</span>
+		</div>
+		<div class="close"><a href="#" class="simplemodal-close">X</a></div>
+		<!-- Player Layout -->
+		<div id="player-modal-data">
+			<div id="player-modal-body">
+				<span id="player-id">...</span><br/>
+				<span id="player-cid">...</span><br/>
+				<span id="player-gid">...</span><br/>
+				<span id="player-Context">...</span><br/>
+				<span id="player-nTeamID">...</span><br/>
+				<span id="player-szName">...</span><br/>
+				<span id="player-cPlayerKills">...</span><br/>
+				<span id="player-cBuilderKills">...</span><br/>
+				<span id="player-cLayerKills">...</span><br/>
+				<span id="player-cMinerKills">...</span><br/>
+				<span id="player-cBaseKills">...</span><br/>
+				<span id="player-cSelfBaseKills">...</span><br/>
+				<span id="player-cBaseCaptures">...</span><br/>
+				<span id="player-cSelfBaseCaptures">...</span><br/>
+				<span id="player-cDeaths">...</span><br/>
+				<span id="player-cEjections">...</span><br/>
+				<span id="player-cRescues">...</span><br/>
+				<span id="player-cFlags">...</span><br/>
+				<span id="player-cArtifacts">...</span><br/>
+				<span id="player-cTechs">...</span><br/>
+				<span id="player-cAlephs">...</span><br/>
+				<span id="player-cRoids">...</span><br/>
+				<span id="player-Rating">...</span><br/>
+				<span id="player-Score">...</span><br/>
+				<span id="player-Duration">...</span><br/>
+				<span id="player-DurationCmd">...</span><br/>
+				<span id="player-Winner">...</span><br/>
+				<span id="player-WinnerCmd">...</span><br/>
+				<span id="player-Loser">...</span><br/>
+				<span id="player-LoserCmd">...</span><br/>
+				<!-- footer 33/33/33 (triplet) -->
+				<div style="float:left;text-align:center;width:100%">
+					<div class="triplet">
+
+						<span id="player-Prev" class="smhead" style="float:left; text-align: left; margin-top: 4px">...</span>
+					</div>
+					<div class="triplet">
+						<button id="playerbutton" class="simplemodal-close">Close</button>
+					</div>
+					<div class="triplet">
+						<span id="player-Next" class="smhead" style="float:right; text-align: right; margin-top: 4px">...</span>
+					</div>
+				</div> <!-- end footer -->
+				<img src="http://174.120.142.26/~imago/images/xline.png" alt="#"/> <!-- intentional: This is used to resize SimpleModal dialog 'on-the-fly' -->
+			</div> <!-- End Player Body -->
+		</div> <!-- End Player Layout -->
+	</div> <!-- End SimpleModal -->
+
+	<!-- QTip -->
+	<div class="qtip qtip-stylename">
+	   <div class="qtip-tip"></div>
+	   <div class="qtip-wrapper">
+		  <div class="qtip-borderTop"></div>
+		  <div class="qtip-contentWrapper">
+			 <div class="qtip-title">
+				<div class="qtip-button"></div>
+			 </div>
+			 <div class="qtip-content"></div>
+		  </div>
+		  <div class="qtip-borderBottom"></div>
+	   </div>
+	</div>
+<!-- Post-Render JS Libz -->
+<script type="text/javascript" src="http://174.120.142.26/~imago/modalz.js"></script>
+<script type="text/javascript" src="http://174.120.142.26/~imago/gridz.js"></script>
+<script type="text/javascript" src="http://174.120.142.26/~imago/tipz.js"></script>
+<script type="text/javascript" src="http://174.120.142.26/~imago/allegz.js"></script>
+</body>
+</html>

@@ -1,0 +1,826 @@
+<perldata>
+ <hashref memory_address="0x29faedc">
+  <item key="AGC">
+   <hashref memory_address="0x2b48dc4">
+    <item key="E">
+     <arrayref memory_address="0x2b48cdc">
+      <item key="0">
+       <hashref memory_address="0x2b45f5c">
+        <item key="Description">Fired when an AGC database event log is started.</item>
+        <item key="DisplayName">Database Event Log Started</item>
+        <item key="Format">An AGC database event log was started for server %.ComputerName%.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">DBEventLogStarted</item>
+        <item key="Severity">Info</item>
+        <item key="id">101</item>
+       </hashref>
+      </item>
+      <item key="1">
+       <hashref memory_address="0x2b4604c">
+        <item key="Description">Fired when an AGC database event log is stopped.</item>
+        <item key="DisplayName">Database Event Log Stopped</item>
+        <item key="Format">An AGC database event log was stopped for server %.ComputerName%.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">DBEventLogStopped</item>
+        <item key="Severity">Info</item>
+        <item key="id">102</item>
+       </hashref>
+      </item>
+      <item key="2">
+       <hashref memory_address="0x2b4615c">
+        <item key="CanChangeLogAsDBEvent">0</item>
+        <item key="Description">Fired when an AGC NT Event Log is started.</item>
+        <item key="DisplayName">NT Event Log Started</item>
+        <item key="Format">An AGC NT Event Log was started for server %.ComputerName%.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">NTEventLogStarted</item>
+        <item key="Severity">Info</item>
+        <item key="id">103</item>
+       </hashref>
+      </item>
+      <item key="3">
+       <hashref memory_address="0x2b4625c">
+        <item key="CanChangeLogAsDBEvent">0</item>
+        <item key="Description">Fired when an AGC NT Event log is stopped.</item>
+        <item key="DisplayName">NT Event Log Stopped</item>
+        <item key="Format">An AGC NT Event Log was stopped for server %.ComputerName%.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">NTEventLogStopped</item>
+        <item key="Severity">Info</item>
+        <item key="id">104</item>
+       </hashref>
+      </item>
+      <item key="4">
+       <hashref memory_address="0x2b4637c">
+        <item key="CanChangeLogAsDBEvent">0</item>
+        <item key="CanChangeLogAsNTEvent">0</item>
+        <item key="Description">Fired when an AGC event is triggered prior to AGC being initialized.</item>
+        <item key="DisplayName">AGC Not Initialized</item>
+        <item key="Format">An AGC Event was triggered prior to the initialization of the AGC module.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">AGCNotInitialized</item>
+        <item key="Severity">Error</item>
+        <item key="id">105</item>
+       </hashref>
+      </item>
+      <item key="5">
+       <hashref memory_address="0x2b4634c">
+        <item key="CanChangeLogAsNTEvent">0</item>
+        <item key="Description">Fired when a generic assert occurs.</item>
+        <item key="Format">ASSERTION FAILED!!!\n%File%(%Line%)\n%Text%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">AGCAssert</item>
+        <item key="Severity">Error</item>
+        <item key="id">106</item>
+       </hashref>
+      </item>
+      <item key="6">
+       <hashref memory_address="0x2b465fc">
+        <item key="Description">Fired when a station is created.</item>
+        <item key="Format">Station was created.\n</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">StationCreated</item>
+        <item key="Severity">Info</item>
+        <item key="id">201</item>
+       </hashref>
+      </item>
+      <item key="7">
+       <hashref memory_address="0x2b466dc">
+        <item key="Description">Fired when a station is destroyed.</item>
+        <item key="Format">Station was deleted.\n</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">StationDeleted</item>
+        <item key="Severity">Info</item>
+        <item key="id">202</item>
+       </hashref>
+      </item>
+      <item key="8">
+       <hashref memory_address="0x2b467bc">
+        <item key="Description">Fired when a station changes sides.</item>
+        <item key="Format">Station changed sides.\n</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">StationChangesSides</item>
+        <item key="Severity">Info</item>
+        <item key="id">203</item>
+       </hashref>
+      </item>
+      <item key="9">
+       <hashref memory_address="0x2b4689c">
+        <item key="Description">Fired when a station is created. Contains a shiplist</item>
+        <item key="Format">Station was created.\n</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">StationCreatedEscort</item>
+        <item key="Severity">Info</item>
+        <item key="id">211</item>
+       </hashref>
+      </item>
+      <item key="10">
+       <hashref memory_address="0x2b4697c">
+        <item key="Description">Fired when a station is destroyed. Contains a shiplist</item>
+        <item key="Format">Station was deleted.\n</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">StationDeletedEscort</item>
+        <item key="Severity">Info</item>
+        <item key="id">212</item>
+       </hashref>
+      </item>
+      <item key="11">
+       <hashref memory_address="0x2b46a5c">
+        <item key="Description">Fired when a station changes sides. Contains a shiplist</item>
+        <item key="Format">Station changed sides.\n</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">StationChangesSidesEscort</item>
+        <item key="Severity">Info</item>
+        <item key="id">213</item>
+       </hashref>
+      </item>
+      <item key="12">
+       <hashref memory_address="0x2b46c1c">
+        <item key="Description">Fired when a ship changes sectors.</item>
+        <item key="Format">%.SubjectName% changed sectors to &apos;%New Sector Name%&apos; (%New Sector%) from &apos;%Old Sector Name%&apos; (%Old Sector%)</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">ShipChangesSectors</item>
+        <item key="Severity">Info</item>
+        <item key="id">301</item>
+       </hashref>
+      </item>
+      <item key="13">
+       <hashref memory_address="0x2b46cfc">
+        <item key="Description">Fired when a ship is killed.</item>
+        <item key="Format">%.SubjectName% was killed by &apos;%LauncherName%&apos; (%Launcher%)\nAmount = &apos;%Amount%&apos;\nVector1 = &apos;%Vector1%&apos;\nVector2 = &apos;%Vector2%&apos;</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">ShipKilled</item>
+        <item key="Severity">Info</item>
+        <item key="id">302</item>
+       </hashref>
+      </item>
+      <item key="14">
+       <hashref memory_address="0x2b47e0c">
+        <item key="Description">Fired when a ship uses a ripcord.</item>
+        <item key="Format">%.SubjectName% used ripcord &apos;%ModelName%&apos;</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">ShipUsesRipcord</item>
+        <item key="Severity">Info</item>
+        <item key="id">303</item>
+       </hashref>
+      </item>
+     </arrayref>
+    </item>
+    <item key="H">1999</item>
+    <item key="L">1</item>
+   </hashref>
+  </item>
+  <item key="Admin">
+   <hashref memory_address="0x2b46cbc">
+    <item key="E">
+     <arrayref memory_address="0x2b46b9c">
+      <item key="0">
+       <hashref memory_address="0x2b4a07c">
+        <item key="Description">Fired when the server is shut down.</item>
+        <item key="Format">Server shut down.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">ServerShutdown</item>
+        <item key="Severity">Info</item>
+        <item key="id">4001</item>
+       </hashref>
+      </item>
+      <item key="1">
+       <hashref memory_address="0x2b4a15c">
+        <item key="Description">Fired when an Allegiance Admin Object Model client application creates a session.</item>
+        <item key="Format">New Admin Session Started.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">NewSession</item>
+        <item key="Severity">Info</item>
+        <item key="id">4010</item>
+       </hashref>
+      </item>
+      <item key="2">
+       <hashref memory_address="0x2b4a23c">
+        <item key="Description">Fired when a user logs in to the server.</item>
+        <item key="Format">%.SubjectName%(%.SubjectID%) logged onto Server.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">LoginServer</item>
+        <item key="Severity">Info</item>
+        <item key="id">4020</item>
+       </hashref>
+      </item>
+      <item key="3">
+       <hashref memory_address="0x2b4a31c">
+        <item key="Description">Fired when a user logs off from the server.</item>
+        <item key="Format">%.SubjectName%(%.SubjectID%) logged off Server.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">LogoutServer</item>
+        <item key="Severity">Info</item>
+        <item key="id">4021</item>
+       </hashref>
+      </item>
+      <item key="4">
+       <hashref memory_address="0x2b4a3fc">
+        <item key="Description">Fired when a chat is sent.</item>
+        <item key="Format">%.SubjectName% (%Target%): %Message%</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">ChatMessage</item>
+        <item key="Severity">Info</item>
+        <item key="id">4030</item>
+       </hashref>
+      </item>
+      <item key="5">
+       <hashref memory_address="0x2b4a4dc">
+        <item key="Description">Fired when a chat is directed to an administrator.</item>
+        <item key="Format">%.SubjectName% (%Target%): %Message%</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">AdminPage</item>
+        <item key="Severity">Info</item>
+        <item key="id">4031</item>
+       </hashref>
+      </item>
+      <item key="6">
+       <hashref memory_address="0x2b4a5bc">
+        <item key="Description">Fired when an administrator calls the AdminSession.SendAdminChat method.</item>
+        <item key="Format">ADMIN (%.SubjectID%) @ %OriginalTime%: %Message%</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">AdminChat</item>
+        <item key="Severity">Info</item>
+        <item key="id">4032</item>
+       </hashref>
+      </item>
+      <item key="7">
+       <hashref memory_address="0x2b4a69c">
+        <item key="Description">Fired when a game is created.</item>
+        <item key="Format">Game %.SubjectName% (id=%.SubjectID%) was created.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">GameCreated</item>
+        <item key="Severity">Info</item>
+        <item key="id">4040</item>
+       </hashref>
+      </item>
+      <item key="8">
+       <hashref memory_address="0x2b4a77c">
+        <item key="Description">Fired when a game was destroyed.</item>
+        <item key="Format">Game %.SubjectName% (%.SubjectID%) was destroyed.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">GameDestroyed</item>
+        <item key="Severity">Info</item>
+        <item key="id">4041</item>
+       </hashref>
+      </item>
+      <item key="9">
+       <hashref memory_address="0x2b4a85c">
+        <item key="Description">Fired when a game&apos;s GameParameters property changes during the phase before the game starts.</item>
+        <item key="Format">The parameters of game (id=%.SubjectID% name=&apos;%.SubjectName%&apos; were changed.</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">GameStateChange</item>
+        <item key="Severity">Info</item>
+        <item key="id">4042</item>
+       </hashref>
+      </item>
+      <item key="10">
+       <hashref memory_address="0x2b4a93c">
+        <item key="Description">Fired when a user joins a game.</item>
+        <item key="Format">%.SubjectName% logged onto game &apos;%GameName%&apos; (id=%GameID%).</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">LoginGame</item>
+        <item key="Severity">Info</item>
+        <item key="id">4050</item>
+       </hashref>
+      </item>
+      <item key="11">
+       <hashref memory_address="0x2b4aa1c">
+        <item key="Description">Fired when a user quits a game.</item>
+        <item key="Format">%.SubjectName% logged off &apos;%GameName%&apos; (id=%GameID%).</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">LogoutGame</item>
+        <item key="Severity">Info</item>
+        <item key="id">4051</item>
+       </hashref>
+      </item>
+      <item key="12">
+       <hashref memory_address="0x2b4aafc">
+        <item key="Description">Fired when a user joins a team.</item>
+        <item key="Format">%.SubjectName% joined team &apos;%TeamName%&apos; (%Team%)</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">JoinTeam</item>
+        <item key="Severity">Info</item>
+        <item key="id">4060</item>
+       </hashref>
+      </item>
+      <item key="13">
+       <hashref memory_address="0x2b4abdc">
+        <item key="Description">Fired when a user quits a team.</item>
+        <item key="Format">%.SubjectName% left team &apos;%TeamName%&apos; (%Team%)</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">LeaveTeam</item>
+        <item key="Severity">Info</item>
+        <item key="id">4061</item>
+       </hashref>
+      </item>
+      <item key="14">
+       <hashref memory_address="0x2b4acbc">
+        <item key="Description">Fired when information about a team changes.</item>
+        <item key="Format">Team &apos;%.SubjectName%&apos; (%.SubjectID%) in game &apos;%.GameName%&apos; (%.GameID%) changed.\nNew team name = &apos;%NewTeamName%&apos;</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">0</item>
+        <item key="Name">TeamInfoChange</item>
+        <item key="Severity">Info</item>
+        <item key="id">4062</item>
+       </hashref>
+      </item>
+      <item key="15">
+       <hashref memory_address="0x2b4bdcc">
+        <item key="Description">Fired when a possible hack attempt has occurred but the player does not get booted.</item>
+        <item key="Format">Possible hack attempt made by %.SubjectName%. Player not booted from the server.\nLine: %Line%\nExpression: %Expr%</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">HackLog</item>
+        <item key="Severity">Warning</item>
+        <item key="id">4070</item>
+       </hashref>
+      </item>
+      <item key="16">
+       <hashref memory_address="0x2b4beac">
+        <item key="Description">Fired when a possible hack attempt has occurred and the player gets booted.</item>
+        <item key="Format">Possible hack attempt made by %.SubjectName%. Player has been booted from the server.\nLine: %Line%\nExpression: %Expr%</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">HackBoot</item>
+        <item key="Severity">Warning</item>
+        <item key="id">4071</item>
+       </hashref>
+      </item>
+      <item key="17">
+       <hashref memory_address="0x2b4bf8c">
+        <item key="Description">Fired when a possible hack attempt has occurred and the player is not known.</item>
+        <item key="Format">Possible hack attempt made by an unknown player. Connection has been disconnected.\nLine: %Line%\nExpression: %Expr%</item>
+        <item key="LogAsDBEvent">1</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">HackBootNoPlayer</item>
+        <item key="Severity">Warning</item>
+        <item key="id">4072</item>
+       </hashref>
+      </item>
+     </arrayref>
+    </item>
+    <item key="H">5999</item>
+    <item key="L">4000</item>
+   </hashref>
+  </item>
+  <item key="Allsrv">
+   <hashref memory_address="0x2b450c4">
+    <item key="E">
+     <arrayref memory_address="0x2b45dac">
+      <item key="0">
+       <hashref memory_address="0x2b47fdc">
+        <item key="Description">Fired when Allsrv is initializing.</item>
+        <item key="Format">Allsrv is initializing.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">Initialize</item>
+        <item key="Severity">Info</item>
+        <item key="id">2001</item>
+       </hashref>
+      </item>
+      <item key="1">
+       <hashref memory_address="0x2b480bc">
+        <item key="Description">Fired when Allsrv is shutting down.</item>
+        <item key="Format">Allsrv is shutting down.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">Terminate</item>
+        <item key="Severity">Info</item>
+        <item key="id">2002</item>
+       </hashref>
+      </item>
+      <item key="2">
+       <hashref memory_address="0x2b4819c">
+        <item key="Description">Fired when unable to access ftp path.</item>
+        <item key="Format">Invalid or missing ftp path.\nPath = &apos;%Path%&apos;\nRun SrvConfig or check FTP server.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">BadFtpPath</item>
+        <item key="Severity">Error</item>
+        <item key="id">2003</item>
+       </hashref>
+      </item>
+      <item key="3">
+       <hashref memory_address="0x2b4827c">
+        <item key="Description">Fired when a player is dropped unexpectedly.</item>
+        <item key="Format">A player was dropped unexpectedly.\nPlayer = &apos;%PlayerName%&apos;\nConnectionID = &apos;%ConxID%&apos;</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">PlayerDropped</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2004</item>
+       </hashref>
+      </item>
+      <item key="4">
+       <hashref memory_address="0x2b4835c">
+        <item key="Description">Fired when DirectPlay session is lost.</item>
+        <item key="Format">DirectPlay session was lost.\nTime = &apos;%Time%&apos;</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">SessionLost</item>
+        <item key="Severity">Error</item>
+        <item key="id">2005</item>
+       </hashref>
+      </item>
+      <item key="5">
+       <hashref memory_address="0x2b4843c">
+        <item key="Description">Fired when message received from unknown player.</item>
+        <item key="Format">Message received from unknown player.\nPlayerID = &apos;%PlayerID%&apos;\nMessage = &apos;%MsgName%&apos;.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">MsgFromUnknownPlayer</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2006</item>
+       </hashref>
+      </item>
+      <item key="6">
+       <hashref memory_address="0x2b4851c">
+        <item key="Description">Fired when internal constant cTokensMax needs to be increased.</item>
+        <item key="Format">Allegiance: cTokensMax needs to be increased.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">IncreaseTokensMax</item>
+        <item key="Severity">Error</item>
+        <item key="id">2007</item>
+       </hashref>
+      </item>
+      <item key="7">
+       <hashref memory_address="0x2b485fc">
+        <item key="Description">Fired when an invalid zone ticket received!</item>
+        <item key="Format">Allegiance: Hacker alert! Invalid zone ticket received!</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">InvalidZoneTicket</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2008</item>
+       </hashref>
+      </item>
+      <item key="8">
+       <hashref memory_address="0x2b486dc">
+        <item key="Description">Fired when DecryptTicket fails.</item>
+        <item key="Format">DecryptTicket failed for an unexpected reason.  Report to dev team immediately.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">DecryptTicketFailed</item>
+        <item key="Severity">Error</item>
+        <item key="id">2009</item>
+       </hashref>
+      </item>
+      <item key="9">
+       <hashref memory_address="0x2b487bc">
+        <item key="Description">Fired when login attempted with no ticket and no character name.</item>
+        <item key="Format">Login attempted with no ticket and no character name.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">NoTicket</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2010</item>
+       </hashref>
+      </item>
+      <item key="10">
+       <hashref memory_address="0x2b4889c">
+        <item key="Description">Fired when database error is preventing access to the character info.</item>
+        <item key="Format">Database error is preventing access to the character info.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">LoginFailed</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2011</item>
+       </hashref>
+      </item>
+      <item key="11">
+       <hashref memory_address="0x2b4897c">
+        <item key="Description">Fired when character could not be created in the database.</item>
+        <item key="Format">Character could not be created in the database.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">CreateCharFailed</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2012</item>
+       </hashref>
+      </item>
+      <item key="12">
+       <hashref memory_address="0x2b48a5c">
+        <item key="Description">Fired when client tried to login with bad version.</item>
+        <item key="Format">Client tried to login with bad version.\nServer version = &apos;%ServerVer%&apos;\nClient version = &apos;%ClientVer%&apos;</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">BadClientVersion</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2013</item>
+       </hashref>
+      </item>
+      <item key="13">
+       <hashref memory_address="0x2b48b3c">
+        <item key="Description">Fired when generic message box function called from within the game server.</item>
+        <item key="Format">%Caption%\n%Text%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">MessageBox</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2014</item>
+       </hashref>
+      </item>
+      <item key="14">
+       <hashref memory_address="0x2b48c1c">
+        <item key="Description">Fired when player donated towards something, and now has negative money.</item>
+        <item key="Format">Player donated towards something, and now has negative money.\nPlayer = &apos;%PlayerName%&apos;\nAmount given = &apos;%MoneyGiven%&apos;\nNew balance = &apos;%MoneyLeft%&apos;</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">MoneyError</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2015</item>
+       </hashref>
+      </item>
+      <item key="15">
+       <hashref memory_address="0x2b48cfc">
+        <item key="Description">Fired when game server prepares to connect to lobby.</item>
+        <item key="Format">Game server connecting to lobby.\nLobby = %LobbyServer%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">Connecting</item>
+        <item key="Severity">Info</item>
+        <item key="id">2016</item>
+       </hashref>
+      </item>
+      <item key="16">
+       <hashref memory_address="0x2b48e04">
+        <item key="Description">Fired when game server fails to connect to lobby.</item>
+        <item key="Format">Game server failed to connect to lobby.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">ConnectError</item>
+        <item key="Severity">Error</item>
+        <item key="id">2017</item>
+       </hashref>
+      </item>
+      <item key="17">
+       <hashref memory_address="0x2b48ee4">
+        <item key="Description">Fired when there is no lobby server specified on the game server.</item>
+        <item key="Format">No lobby server specified.  Run SrvConfig.\nOnly lobby mode is currently supported.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">NoLobby</item>
+        <item key="Severity">Error</item>
+        <item key="id">2018</item>
+       </hashref>
+      </item>
+      <item key="18">
+       <hashref memory_address="0x2b48fc4">
+        <item key="Description">Fired when game server is preparing session for clients.</item>
+        <item key="Format">Preparing session for clients.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">HostSession</item>
+        <item key="Severity">Info</item>
+        <item key="id">2019</item>
+       </hashref>
+      </item>
+      <item key="19">
+       <hashref memory_address="0x2b490a4">
+        <item key="Description">Fired when game server cannot host session.</item>
+        <item key="Format">Cannot host session. Check for correct dplay installation.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">CantHostSession</item>
+        <item key="Severity">Error</item>
+        <item key="id">2020</item>
+       </hashref>
+      </item>
+      <item key="20">
+       <hashref memory_address="0x2b49184">
+        <item key="Description">Fired when registry Key for FTP/HTTP auto-update is invalid or missing.</item>
+        <item key="Format">Registry Key for FTP auto-update is invalid or missing.\nAutoUpdate may be disabled.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">CantWatchArt</item>
+        <item key="Severity">Error</item>
+        <item key="id">2021</item>
+       </hashref>
+      </item>
+      <item key="21">
+       <hashref memory_address="0x2b49264">
+        <item key="Description">Fired when game server is starting as an NT service.</item>
+        <item key="Format">Game server starting as an NT service.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">StartingService</item>
+        <item key="Severity">Info</item>
+        <item key="id">2022</item>
+       </hashref>
+      </item>
+      <item key="22">
+       <hashref memory_address="0x2b49344">
+        <item key="Description">Fired when game server fails to load zoneauth.dll and/or authauthdecrypt.dll.</item>
+        <item key="Format">Game server failed to load zoneauth.dll and/or authauthdecrypt.dll. Verify that they are both registered.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">ZoneAuthServer</item>
+        <item key="Severity">Error</item>
+        <item key="id">2023</item>
+       </hashref>
+      </item>
+      <item key="23">
+       <hashref memory_address="0x2b49444">
+        <item key="CanChangeLogAsNTEvent">0</item>
+        <item key="Description">Fired when a generic assert occurs in the game server.</item>
+        <item key="Format">ASSERTION FAILED!!!\n%File%(%Line%)\n%Error%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">Assert</item>
+        <item key="Severity">Error</item>
+        <item key="id">2024</item>
+       </hashref>
+      </item>
+      <item key="24">
+       <hashref memory_address="0x2b49434">
+        <item key="Description">Fired when art changes during initialization.</item>
+        <item key="Format">Art Directory&apos;s contents changed during AllSrv&apos;s initialization.\nPlease restart the server.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">ArtChangedInInit</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2025</item>
+       </hashref>
+      </item>
+      <item key="25">
+       <hashref memory_address="0x2b495f4">
+        <item key="Description">Fired when a service-related system error occurs.</item>
+        <item key="Format">%Text%\n%Message%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">SystemError</item>
+        <item key="Severity">Error</item>
+        <item key="id">2027</item>
+       </hashref>
+      </item>
+      <item key="26">
+       <hashref memory_address="0x2b496d4">
+        <item key="Description">Fired when the game server loses its connection to the lobby server.</item>
+        <item key="Format">Lost connection to lobby server.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">LostLobby</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2028</item>
+       </hashref>
+      </item>
+      <item key="27">
+       <hashref memory_address="0x2b497b4">
+        <item key="Description">Fired when a game is started.</item>
+        <item key="Format">Game started.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">GameStarted</item>
+        <item key="Severity">Info</item>
+        <item key="id">2029</item>
+       </hashref>
+      </item>
+      <item key="28">
+       <hashref memory_address="0x2b49894">
+        <item key="Description">Fired when a game is ended on the game server.</item>
+        <item key="Format">Game has ended\nReason = &apos;%Reason%&apos;</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">GameEnded</item>
+        <item key="Severity">Info</item>
+        <item key="id">2030</item>
+       </hashref>
+      </item>
+      <item key="29">
+       <hashref memory_address="0x2b49974">
+        <item key="Description">Fired when a game has been completed on the game server.</item>
+        <item key="Format">Game over (but mission still active until all players out).</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">GameOver</item>
+        <item key="Severity">Info</item>
+        <item key="id">2031</item>
+       </hashref>
+      </item>
+      <item key="30">
+       <hashref memory_address="0x2b49a54">
+        <item key="Description">Fired when the update latency on the game server exceeds thresholds.</item>
+        <item key="Format">Update latency exceded.\nTime now = &apos;%TimeNow%&apos;\nLast upd = &apos;%TimeLast%\nDelta    = %Delta%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">LatencyExceeded</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2032</item>
+       </hashref>
+      </item>
+      <item key="31">
+       <hashref memory_address="0x2b49b34">
+        <item key="Description">Fired when game server successfully connects to a lobby.</item>
+        <item key="Format">Game server connected to lobby.\nLobby = %LobbyServer%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">ConnectedLobby</item>
+        <item key="Severity">Info</item>
+        <item key="id">2033</item>
+       </hashref>
+      </item>
+      <item key="32">
+       <hashref memory_address="0x2b49c14">
+        <item key="Description">Fired when game server prepares to disconnect from a lobby.</item>
+        <item key="Format">Game server disconnecting from lobby.\nLobby = %LobbyServer%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">DisconnectingLobby</item>
+        <item key="Severity">Info</item>
+        <item key="id">2034</item>
+       </hashref>
+      </item>
+      <item key="33">
+       <hashref memory_address="0x2b49cf4">
+        <item key="Description">Fired when game server successfully disconnects from a lobby.</item>
+        <item key="Format">Game server disconnected from lobby.\nLobby = %LobbyServer%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">DisconnectedLobby</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2035</item>
+       </hashref>
+      </item>
+      <item key="34">
+       <hashref memory_address="0x2acba04">
+        <item key="Description">Fired when there&apos;s a SQL database error</item>
+        <item key="Format">SQL Error Record:\nMessage:   %Message%\nProcedure: %Procedure%\nNative:    %Native%\nLine:      %Line%\nOleDB:     %OleDB%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">DatabaseErrorSQL</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2036</item>
+       </hashref>
+      </item>
+      <item key="35">
+       <hashref memory_address="0x2acbae4">
+        <item key="Description">Fired when the server is paused</item>
+        <item key="Format">Server paused.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">Pause</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2037</item>
+       </hashref>
+      </item>
+      <item key="36">
+       <hashref memory_address="0x2b49ddc">
+        <item key="Description">Fired when server is continued (from being paused)</item>
+        <item key="Format">Server continued.</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">Continue</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2038</item>
+       </hashref>
+      </item>
+      <item key="37">
+       <hashref memory_address="0x2b49ebc">
+        <item key="Description">Fired when there&apos;s an OLE DB specific database error</item>
+        <item key="Format">OLE DB Error Record:\nDescription: %Desc%\nGuid:        %Guid%\nHelpID:      %HelpID%\nHelpFile:    %HelpFile%\nSource:      %Source%</item>
+        <item key="LogAsDBEvent">0</item>
+        <item key="LogAsNTEvent">1</item>
+        <item key="Name">DatabaseErrorOLEDB</item>
+        <item key="Severity">Warning</item>
+        <item key="id">2039</item>
+       </hashref>
+      </item>
+     </arrayref>
+    </item>
+    <item key="H">3999</item>
+    <item key="L">2000</item>
+   </hashref>
+  </item>
+ </hashref>
+</perldata>
